@@ -11,23 +11,19 @@ import lombok.Setter;
 
 @Getter
 @Setter
-
 @Entity
-@Table(name = "usarios")
-
+@Table(name = "usuarios")
 public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
 
-    @Column
-    private String firstName;
+    @Column(name = "first_name")
+    private String first_name;
 
-    @Column
-    private String lastName;
+    @Column(name = "last_name")
+    private String last_name;
 
-    @Column
+    @Column(name = "email")
     private String email;
-
 }

@@ -1,15 +1,18 @@
--- Crear la base de datos
+SELECT *
+FROM usuarios;
+ALTER TABLE usuarios DROP COLUMN firstName;
+ALTER TABLE usuarios DROP COLUMN lastName;
+DELETE FROM usuarios
+WHERE id = 22;
+DROP DATABASE ejemplo;
 CREATE DATABASE IF NOT EXISTS ejemplo;
--- Seleccionar la base de datos
 USE ejemplo;
--- Crear la tabla
 CREATE TABLE IF NOT EXISTS usuarios (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(255),
     last_name VARCHAR(255),
     email VARCHAR(255)
 );
--- Introducir datos
 INSERT INTO usuarios (first_name, last_name, email)
 VALUES ('Alice', 'Johnson', 'alice.johnson@example.com'),
     ('Bob', 'Smith', 'bob.smith@example.com'),
@@ -39,10 +42,6 @@ VALUES ('Alice', 'Johnson', 'alice.johnson@example.com'),
         'steve.robinson@example.com'
     ),
     ('Tina', 'Clark', 'tina.clark@example.com');
--- DROP DATABASE ejemplo;
-SELECT nombre,
-    firstName
-FROM usuarios;
 SELECT *
 FROM usuarios;
 { "first_name": "Juan",

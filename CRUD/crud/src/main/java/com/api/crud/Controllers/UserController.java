@@ -17,7 +17,7 @@ import com.api.crud.Services.UserService;
 import com.api.crud.models.UserModel;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/usuarios")
 public class UserController {
 
     @Autowired
