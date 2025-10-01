@@ -1,6 +1,7 @@
 package com.api.crud.Controllers;
 
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,8 +44,9 @@ public class UserController {
         return this.userService.updateByID(request, id);
     }
 
-    @DeleteMapping(path = "{id}")
-    public Boolean deleteUser(@PathVariable Long id) {
+    @DeleteMapping
+    public Boolean deleteUser(@RequestBody Map<String, Long> body) {
+        Long id = body.get("id");
         return this.userService.deleteUser(id);
     }
 
