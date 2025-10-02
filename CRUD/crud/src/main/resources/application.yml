@@ -6,10 +6,10 @@ spring:
     name: crud
 
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ejemplo?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/ejemplo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: root
-    password: picasent10
+    password: rootpass
 
   jpa:
     hibernate:
